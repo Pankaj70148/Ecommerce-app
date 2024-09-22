@@ -6,6 +6,7 @@ import axios from "axios";
 
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
+import { url } from "../Url";
 
 const CategoryProduct = () => {
   const params = useParams();
@@ -22,7 +23,7 @@ const CategoryProduct = () => {
   const getPrductsByCat = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/product/product-category/${params.slug}`
+        `${url}/api/v1/product/product-category/${params.slug}`
       );
       setProducts(data?.products);
       setCategory(data?.category);
@@ -42,7 +43,7 @@ const CategoryProduct = () => {
               {products?.map((p) => (
                 <div className="card m-2" key={p._id}>
                   <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
+                    src={`${url}/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />
