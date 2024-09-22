@@ -1,1 +1,1 @@
-export const url=  "http://localhost:8080";
+export const url=  "https://ecommerce-app-77i1.onrender.com/";
