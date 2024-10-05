@@ -1,1 +1,1 @@
-export const url=  "https://e-commerce-website-f6hd.onrender.com";
+export const url=  "https://ecommerce-app-77i1.onrender.com";
